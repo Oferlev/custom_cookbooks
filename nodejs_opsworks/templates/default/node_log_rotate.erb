@@ -1,5 +1,7 @@
 /var/log/nodejs_prod.log {
-  rotate 2
+  missingok
+  notifempty
   daily
+  rotate 2
   compress
 }
