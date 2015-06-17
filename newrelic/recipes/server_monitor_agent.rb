@@ -1,4 +1,3 @@
-#
 # Cookbook Name:: newrelic
 # Recipe:: server_monitor_agent
 #
