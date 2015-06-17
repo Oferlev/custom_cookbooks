@@ -6,7 +6,6 @@
 # Copyright 2012-2015, Escape Studios
 #
 
-include_recipe 'python'
 
 newrelic_agent_python 'Install' do
   license node['newrelic']['license']
