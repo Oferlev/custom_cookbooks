@@ -1,5 +1,4 @@
 
-
 execute 'repo_install' do
   command "sudo /bin/rpm -Uvh " <%= node[:newrelic][:repo_inst_url] %> 
   action :run
@@ -10,8 +9,10 @@ execute 'newrelic-sysmond' do
   action :run
 end
 
-execute 'newrelic-sysmond' do
-  command "sudo /usr/sbin/nrsysmond-config --set  license_key="<%=node[:newrelic][:license_key]%>
-  action :run
+template "/etc/newrelic/nrsysmond.cfg" do
+  source "newrelic_nrsysmond.erb"
+  mode '0766'
+  owner "root"
+  group "newrelic"
 end
 
