@@ -1,0 +1,7 @@
+check host node_web_app_proxy with address 127.0.0.1
+  start program = "/bin/bash -c 'cd /srv/www/proxy/current ; source /srv/www/proxy/shared/app.env ; /usr/bin/env PORT=80 NODE_PATH=/srv/www/proxy/current/node_modules:/srv/www/proxy/current /usr/local/bin/node /srv/www/proxy/current/server.js &> /var/log/nodejs_prod.log'"
+  stop program = "/usr/bin/pkill -f 'node /srv/www/proxy/current/server.js'"
+  if failed port 80 protocol HTTP
+    request /
+    with timeout 10 seconds
+    then restart
