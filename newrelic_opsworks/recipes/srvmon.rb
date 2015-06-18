@@ -11,7 +11,7 @@ execute 'newrelic-sysmond' do
 end
 
 execute 'newrelic-sysmond' do
-  command "sudo /usr/sbin/nrsysmond-config --set " license_key=<%=node[:newrelic][:license_key]%>
+  command "sudo /usr/sbin/nrsysmond-config --set  license_key="<%=node[:newrelic][:license_key]%>
   action :run
 end
 
