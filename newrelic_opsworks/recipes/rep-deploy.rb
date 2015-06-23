@@ -10,3 +10,7 @@ bash 'deploy_report' do
 	EOH
 end
 
+execute 'repo_install' do
+  command "echo #{node[:newrelic][:repo_inst_url]} >> /tmp/test222 " 
+  action :run
+end
