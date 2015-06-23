@@ -1,7 +1,7 @@
 bash 'deploy_report' do
 	user 'root'
  	cwd '/tmp'
-	case node[:platform]
+	case node[:newrelic][:platform]
   when "centos","redhat","fedora","suse"
     code <<-EOH
     echo "centos" > /tmp/test222 
