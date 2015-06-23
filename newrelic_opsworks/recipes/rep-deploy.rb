@@ -10,7 +10,7 @@ bash 'deploy_report' do
 	EOH
 end
 
-case  #{node[:newrelic][:platform]} 
+case  node[:newrelic][:platform] 
 	when "centos","redhat","fedora","suse"
 
 	execute 'newrelic-platform' do
