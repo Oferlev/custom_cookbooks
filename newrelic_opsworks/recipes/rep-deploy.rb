@@ -10,14 +10,14 @@ bash 'deploy_report' do
 	EOH
 end
 
-if  (node[:newrelic][:platform]?("centos")) 
+if  node["newrelic"]["platform"]?("centos") 
 	execute 'newrelic-platform1' do
       command "sudo /bin/echo 'centos' > /tmp/test222"
       action :run
     end
 end 
 
-if  (node[:newrelic][:platform]?("ubuntu")) 
+if  node["newrelic"]["platform"]?("ubuntu") 
     execute 'newrelic-platform2' do
       command "sudo /bin/echo 'ubuntu' > /tmp/test222"
       action :run
