@@ -22,4 +22,5 @@ end
   command "sudo /bin/echo 'ubuntu' "
   action :run
 
+   end
   end
