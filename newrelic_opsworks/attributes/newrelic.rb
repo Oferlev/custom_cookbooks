@@ -3,5 +3,5 @@ default[:newrelic][:license_key] = '0000ffff0000ffff0000ffff0000ffff0000ffff'
 default[:newrelic][:api_key] = '0000ffff0000ffff0000ffff0000ffff0000ffff'
 default[:newrelic][:app_name] = 'Proxy'
 default[:newrelic][:gits_url] = 'http://github.com/'
-default[:newrelic][:platform] = 'centos'
+default[:newrelic][:platform] = 'ubuntu'
 
