@@ -17,3 +17,9 @@ template "/etc/newrelic/nrsysmond.cfg" do
   group "newrelic"
 end
 
+execute 'newrelic-start' do
+  command "sudo /etc/init.d/newrelic-sysmond start "
+  action :run
+end
+
+
