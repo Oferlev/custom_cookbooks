@@ -11,4 +11,12 @@ bash 'deploy_report' do
 end
 
 
+case node["platform"]
+when "debian", "ubuntu"
+  echo " =====11 #{node['platform']} 11=====" >  /tmp/test222 
+when "redhat", "centos", "fedora", "amazon"
+  echo " =====22 #{node['platform']} 22=====" >  /tmp/test222 
+end
+
+
 
