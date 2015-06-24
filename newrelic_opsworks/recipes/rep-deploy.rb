@@ -13,9 +13,15 @@ end
 
 case node["platform"]
 when "debian", "ubuntu"
-  echo " =====11 #{node['platform']} 11=====" >  /tmp/test222 
+ execute 'newrelic-a' do	
+  command "echo 'UBUNTU' >  /tmp/test222 "
+  action :run
+ end
 when "redhat", "centos", "fedora", "amazon"
-  echo " =====22 #{node['platform']} 22=====" >  /tmp/test222 
+  execute 'newrelic-a' do	
+  command "echo 'AMAZON' >  /tmp/test222 "
+  action :run
+ end
 end
 
 
