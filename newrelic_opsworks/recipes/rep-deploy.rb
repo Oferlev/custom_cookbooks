@@ -11,18 +11,4 @@ bash 'deploy_report' do
 end
 
 
-case node["platform"]
-when "debian", "ubuntu"
- execute 'newrelic-a' do	
-  command "echo 'UBUNTU' >  /tmp/test222 "
-  action :run
- end
-when "redhat", "centos", "fedora", "amazon"
-  execute 'newrelic-a' do	
-  command "echo 'AMAZON' >  /tmp/test222 "
-  action :run
- end
-end
-
-
 
