@@ -10,7 +10,7 @@ case node["platform"]
     end 
  
     execute 'ubnt_repo_install' do 
-      command "sudo /usr/bin/wget -O- #{node[:newrelic][:apt_repo]}" | sudo /usr/bin/apt-key add - "
+      command "sudo /usr/bin/wget -O- #{node[:newrelic][:apt_repo]} | sudo /usr/bin/apt-key add - "
       action :run
     end   
 
