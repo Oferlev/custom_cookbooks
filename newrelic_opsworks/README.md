@@ -30,9 +30,9 @@ Make sure you run Chef >= 0.10.0.
 
 * `node['newrelic']['license_key']` - Your New Relic license key. 
    Default is '0000ffff0000ffff0000ffff0000ffff0000ffff'
-* `node['newrelic']['api_key'] - Your New Relic license key for API purposes. 
+* `node['newrelic']['api_key']` - Your New Relic license key for API purposes. 
    Default is 'aaeecc0000ffff0000ffff0000ffff0000ffff0000ffff'
-* `node[:newrelic][:yum_repo] - URL of New Relic rpm repository
+* `node[:newrelic][:yum_repo]` - URL of New Relic rpm repository
    Default is 'http://yum.newrelic.com/pub/newrelic/el5/x86_64/newrelic-repo-5-3.noarch.rpm'
 
    All values cann be replaced by change in "AWS Stack Settings"
